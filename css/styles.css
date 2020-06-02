@@ -1,0 +1,166 @@
+*{
+    box-sizing: border;
+}
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+    padding: 25px;
+    max-width: 800px;
+    background: #212529;
+    color: #fff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1rem;
+    /* line-height: 1.5; */
+}
+
+h1, h2, p{
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    font-size: 1.55em;
+}
+h2{
+    padding: .6em .4em 0 0;
+}
+
+.container, 
+.total-overview, 
+.daily{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+
+/******************  HEADER STYLES **********************/
+.darkmode{
+    margin-top: 1.5em;
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn{
+    border-radius: 20px;
+    padding-right: 25px;
+    background: linear-gradient(45deg, lightgreen, green);
+    color: #000;
+    text-align: start;
+    border: 2px solid green;
+}
+
+
+/*********************** CARD STYLES ****************************/
+.card{
+    background: #183153 ;
+    padding: 1em;
+    text-align: center;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.blue-top{
+    border-top: 10px solid #02F7F8;
+}
+.gradient-top{
+    border-top: 10px solid pink;
+    border-image: linear-gradient( 90deg, pink, red) 10;
+
+}
+.red-top{
+    border-top: 10px solid red;
+}
+
+
+/********************CARD CONTENT STYLES **********************/
+
+
+.card p{
+    font-size: 1.375rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card span{
+    font-size: 3em;
+    color: #fff;
+}
+
+.tag{
+    color: rgba(225, 225, 225, 0.6);
+    padding-top: 1.5em;
+}
+.green-text{
+    color: green;
+    padding-top: 1.5em;
+    font-size: 16px;
+}
+
+.orange-text{
+    color: orange;
+    padding-top: 1.5em;
+    font-size: 16px;
+}
+
+
+
+.positive .positive-percentage{
+    color: green;
+    font-size: 20px;
+    padding-left: 1.5rem
+}
+.negative .negative-percentage{
+    color: red;
+    font-size: 20px;
+    padding-left: 1.5rem
+}
+
+
+@media (min-width: 600px){
+    .wrapper{
+        min-width: 860px;
+    }
+
+ .total-overview, 
+    .daily{
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    .daily .card{
+        flex-basis: 150px;
+        flex-direction: row;
+    }
+
+    .daily .card p{
+        font-size: 1rem;
+        letter-spacing: normal;
+    }
+
+    .daily .card span{
+        font-size: 1em;
+        color: #fff;
+    }
+
+    .tag{
+        padding-top: 0;
+    }
+
+    .positive .positive-percentage,
+    .negative .negative-percentage{
+        padding-top: 1.275rem;
+    }
+
+}
+
+
+
+
+
+
+
+
