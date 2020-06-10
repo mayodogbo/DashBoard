@@ -5,106 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="css/all.css"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Dashboard Summary</title>
+    <title>Frontend Mentor | Social Media Dashboard</title>
 </head>
 <body>
-    <div class="wrapper">
-        <header class="container">
-            <div class="title">
-                <h1>Social Media Dashboard</h1>
-                <p>Total followers: 23,004</p>
-            </div>
+    <header class="container">
+        <div class="title">
+            <h1>Social Media Dashboard</h1>
+            <p>Total followers: 23,004</p>
+        </div>
 
-            <div class="darkmode">
-                <p>Dark Mode</p>
-                <p class="btn"><i class="fas fa-circle"></i></p>
-            </div>
-        </header>
-
+        <div class="darkmode">
+            <p>Dark Mode</p>
+            <button class="btn"><i class="fas fa-circle"></i></button>
+        </div>
+    </header>
 <!-- THIS SECTION IS FOR TOTAL OVERVIEW
  ---------------------------------------
 ----------------------------------------->
-        <section class="total-overview">
+    <div class="wrapper">
+        <div class="total">
             <div class="card blue-top">
                 <p><i class="fab fa-facebook-square" style="color: blue"></i> @nathamf</p>
-                <p class="tag"><span>1987</span><br>followers</p>
+                <p class="numbers">1987</p>
+                <p class="tag">followers</p>
                 <p class="green-text"><i class="fas fa-caret-up"></i> 12 Today</p>
             </div>
-    
-    
+        
+        
             <div class="card blue-top">
                 <p><i class="fab fa-twitter" style="color: blue"></i></i></i> @nathamf</p>
-                <p  class="tag"><span>1044</span> <br> followers</p>
+                <p  class="numbers">1044</p>
+                <p class="tag">followers</p>
                 <p class="green-text"><i class="fas fa-caret-up"></i> 99 Today</p>
             </div>
-    
-    
+        
+        
             <div class="card gradient-top">
                 <p><i class="fab fa-instagram" style="color: red"></i></i></i> @nathamf</p>
-                <p class="tag"><span>111K</span> <br> followers</p>
+                <p class="numbers">11K</p>
+                <p class="tag">followers</p>
                 <p class="green-text"><i class="fas fa-caret-up"></i> 1099 Today</p>
             </div>
-    
-    
+        
+        
             <div class="card red-top">
                 <p><i class="fab fa-youtube" style="color: red"></i></i></i> NathanF</p>
-                <p class="tag"><span>8239</span> <br>subcribers</p>
+                <p class="numbers">8239</p>
+                <p class="tag">subcribers</p>
                 <p class="orange-text negative"><i class="fas fa-caret-down" style="color: red"></i> 144 Today</p>
             </div>
-        </section>
+        </div>
         
-
-
 <!--THIS SECTION IS FOR THE  DAILY OVERVIEW 
 -------------------------------------------
 ------------------------------------------->
-        <section class="overview">
-            <h2>Overview - Today</h2>
-            <div class="daily">
-                <div class="card overview-card">
-                    <p class="tag">page views <br><span>87</span></p>
-                    <p class="positive"><i class="fab fa-facebook-square" style="color: blue"></i> <span class="positive-percentage"><i class="fas fa-caret-up" style="color: green"></i>3%</span></p>
-                </div>
-    
-                <div class="card overview-card">
-                    <p class="tag">retweets <br><span>52</span></p>
-                    <p class="negative"><i class="fab fa-facebook-square" style="color: blue"></i><span class="negative-percentage"><i class="fas fa-caret-up" style="color: red"></i>2%</span></p>
-                </div>
-    
-                <div class="card overview-card">
-                    <p class="tag">likes <br><span>5462</span></p>
-                    <p class="positive"><i class="fab fa-instagram" style="color: red"></i></i><span class="positive-percentage"><i class="fas fa-caret-up" style="color: green"></i>257</span></p>
-                </div>
-    
-                <div class="card overview-card">
-                    <p class="tag">profile views <br><span>52K</span></p>
-                    <p class="positive"><i class="fab fa-instagram" style="color: red"></i></i><span class="positive-percentage"><i class="fas fa-caret-up" style="color: green"></i>375%</span></p>
-                </div>
-    
-                <div class="card overview-card">
-                    <p class="tag">retweets <br><span>117</span></p>
-                    <p class="positive"><i class="fab fa-twitter" style="color: blue"></i></i><span class="positive-percentage"><i class="fas fa-caret-up" style="color: green"></i></span></p>
-                </div>
-    
-                <div class="card overview-card">
-                    <p class="tag">likes <br><span>507</span></p>
-                    <p class="positive"><i class="fab fa-twitter" style="color: blue"></i></i><span class="positive-percentage"><i class="fas fa-caret-up" style="color: green"></i>553%</span></p>
-                </div>
-    
-                <div class="card overview-card">
-                    <p class="tag">likes <br><span>107</span></p>
-                    <p class="negative"><i class="fab fa-youtube" style="color: red"></i></i><span class="negative-percentage"><i class="fas fa-caret-up" style="color: red"></i>19%</span></p>
-                </div>
-    
-                <div class="card overview-card">
-                    <p class="tag">total views <br><span>1407</span></p>
-                    <p class="negative"><i class="fab fa-youtube" style="color: red"></i></i><span class="negative-percentage"><i class="fas fa-caret-up" style="color: red"></i>12%</span></p>
-                </div>
+        <h2>Overview - Today</h2>
+
+        <div class="daily">
+            <div class="card overview-card">
+                <p class="overview-tag">page views</p>
+                <p class="positive"><i class="fab fa-facebook-square" style="color: blue"></i></p>
+                <p class="number">87</p>
+                <p class="positive-percentage"><i class="fas fa-caret-up" style="color: green"></i>3%</p>
+            </div>
+            
+            <div class="card overview-card">
+                <p class="overview-tag">retweets</p>
+                <p class="negative"><i class="fab fa-facebook-square" style="color: blue"></i>
+                <p class="numbers">52</p>
+                <p class="negative-percentage"><i class="fas fa-caret-up" style="color: red"></i>2%</p>
+            </div>
+            
+            <div class="card overview-card">
+                <p class="overview-tag">likes</p>
+                <p class="positive"><i class="fab fa-instagram" style="color: red"></i>
+                <p class="number">5462</p>
+                <p class="positive-percentage"><i class="fas fa-caret-up" style="color: green"></i>257</p>
+            </div>
+            
+            <div class="card overview-card">
+                <p class="overview-tag">profile views</p>
+                <p class="positive"><i class="fab fa-instagram" style="color: red"></i></i>
+                <p class="number">52K</p>
+                <p class="positive-percentage"><i class="fas fa-caret-up" style="color: green"></i>375%</</p>
             </div>
     
-        </section>
-        
+            <div class="card overview-card">
+                <p class="overview-tag">retweets</p>
+                <p class="positive"><i class="fab fa-twitter" style="color: blue"></i></i>
+                <p class="numbers">117</p>
+                <p class="positive-percentage"><i class="fas fa-caret-up" style="color: green"></i></p>
+            </div>
+            
+            <div class="card overview-card">
+                <p class="overview-tag">likes</p>
+                <p class="positive"><i class="fab fa-twitter" style="color: blue"></i></i>
+                <p class="number">507</p>
+                <p class="positive-percentage"><i class="fas fa-caret-up" style="color: green"></i>553%</</p>
+            </div>
+            
+            <div class="card overview-card">
+                <p class="overview-tag">likes</p>
+                <p class="negative"><i class="fab fa-youtube" style="color: red"></i></i>
+                <p class="number">107</p>
+                <p class="negative-percentage"><i class="fas fa-caret-up" style="color: red"></i>19%</p>
+            </div>
+            
+            <div class="card overview-card">
+                <p class="overview-tag">total views</p>
+                <p class="negative"><i class="fab fa-youtube" style="color: red"></i></i>
+                <p class="number">1407</p>
+                <p class="negative-percentage"><i class="fas fa-caret-up" style="color: red"></i>12%</p>
+            </div>
+        </div>
+
 
     </div>
 

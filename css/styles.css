@@ -1,21 +1,14 @@
 *{
     box-sizing: border;
+    padding: 0;
+    margin: 0;
 }
-.wrapper{
-    width: 90%;
-    margin: 0 auto;
-    padding: 25px;
-    max-width: 800px;
-    background: #212529;
+body{
+    background: #20222F;
     color: #fff;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1rem;
-    /* line-height: 1.5; */
-}
-
-h1, h2, p{
-    padding: 0;
-    margin: 0;
+    line-height: 1.5;
 }
 
 h1{
@@ -25,24 +18,8 @@ h2{
     padding: .6em .4em 0 0;
 }
 
-.container, 
-.total-overview, 
-.daily{
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
-}
-
-
-/******************  HEADER STYLES **********************/
-.darkmode{
-    margin-top: 1.5em;
-    padding: 1em 0;
-    display: flex;
-    justify-content: space-between;
-}
-
 .btn{
+    border: 0;
     border-radius: 20px;
     padding-right: 25px;
     background: linear-gradient(45deg, lightgreen, green);
@@ -52,10 +29,47 @@ h2{
 }
 
 
-/*********************** CARD STYLES ****************************/
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1300px;
+}
+
+
+
+/******************  HEADER STYLES **********************/
+.container{ 
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1300px;
+    display: flex;
+    padding: 1rem 0;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.darkmode{
+    width:130px;
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+/***********************
+LAYOUT STYLES
+ ****************************/
+ .total, .daily{
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     grid-column-gap: 1rem;
+ }
+
+/***********************
+CARD STYLES 
+****************************/
 .card{
-    background: #183153 ;
-    padding: 1em;
+    background: #252B43;
+    padding: 1rem .175rem;
     text-align: center;
     margin-top: 1em;
     display: flex;
@@ -63,104 +77,91 @@ h2{
     align-content: space-between;
 }
 
+
 .blue-top{
-    border-top: 10px solid #02F7F8;
+    border-top: 1px solid #02F7F8;
+
 }
 .gradient-top{
-    border-top: 10px solid pink;
-    border-image: linear-gradient( 90deg, pink, red) 10;
+    border-top: 1px solid pink;
+    border-image: linear-gradient( 45deg, yellow, red) 1px;
 
 }
 .red-top{
-    border-top: 10px solid red;
+    border-top: 1px solid red;
+}
+
+
+.daily .card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 
 /********************CARD CONTENT STYLES **********************/
-
-
-.card p{
-    font-size: 1.375rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.card span{
-    font-size: 3em;
-    color: #fff;
+.overview-tag{
+    font-size: .625rem;
 }
 
 .tag{
-    color: rgba(225, 225, 225, 0.6);
-    padding-top: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: .5rem;
+    color: rgba(255, 255, 255, .5);
 }
+
+.number{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.total .card .numbers{
+    font-size: 3em;
+    font-weight: 700;
+}
+
 .green-text{
     color: green;
-    padding-top: 1.5em;
-    font-size: 16px;
+    padding-top: 1.8rem;
+    font-size: .57rem;
 }
 
 .orange-text{
-    color: orange;
-    padding-top: 1.5em;
-    font-size: 16px;
+    color: rgba(225, 0, 0, .5);
+    padding-top: 1.8rem;
+    font-size: .625rem;
 }
 
-
-
-.positive .positive-percentage{
+ .positive-percentage{
     color: green;
-    font-size: 20px;
-    padding-left: 1.5rem
+    font-size: .625rem;
+    /* padding-left: 1.5rem */
 }
-.negative .negative-percentage{
-    color: red;
-    font-size: 20px;
-    padding-left: 1.5rem
-}
+ .negative-percentage{
+    color: rgba(225, 0, 0, .5);
+    font-size: .625rem;
+ }
 
 
-@media (min-width: 600px){
-    .wrapper{
-        min-width: 860px;
-    }
+@media (max-width: 768px){
+        .container{
+            flex-direction: column;
+        }
+        .darkmode{
+            width: 100%;
+            border-top: 2px solid rgba(0, 0, 0, .8);
+            margin-top: 1.5rem;
+        }
 
- .total-overview, 
-    .daily{
-        flex-flow: row wrap;
-        justify-content: space-between;
-    }
+        .total, .daily{
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 1rem;
+        }
 
-    .daily .card{
-        flex-basis: 150px;
-        flex-direction: row;
-    }
-
-    .daily .card p{
-        font-size: 1rem;
-        letter-spacing: normal;
-    }
-
-    .daily .card span{
-        font-size: 1em;
-        color: #fff;
-    }
-
-    .tag{
-        padding-top: 0;
-    }
-
-    .positive .positive-percentage,
-    .negative .negative-percentage{
-        padding-top: 1.275rem;
-    }
+        .daily .card{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2rem 1rem;
+        }
 
 }
-
-
-
-
-
-
-
-
